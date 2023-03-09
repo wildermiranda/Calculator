@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+
+  <script src="https://unpkg.com/phosphor-icons"></script>
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="calculator">
+    <div class="display">
+      <div class="wrapper">
+        <div class="red-circle"></div>
+        <div class="yellow-circle"></div>
+        <div class="green-circle"></div>
+      </div>
+
+      <output>0</output>
+    </div>
+    
+  
+    <div id="keyboard">
+      <button data-action="clear">AC</button>
+      <button class="ph-percent-bold" data-action="percent"></button>
+      <button data-action="decimal">,</button>
+      <button class="ph-divide-bold bg-orange operator" data-action="divide"></button>
+      <button class="number">7</button>
+      <button class="number">8</button>
+      <button class="number">9</button>
+      <button class="ph-x-bold bg-orange operator" data-action="multiply"></button>
+      <button class="number">4</button>
+      <button class="number">5</button>
+      <button class="number">6</button>
+      <button class="ph-minus-bold bg-orange operator" data-action="subtract"></button>
+      <button class="number">1</button>
+      <button class="number">2</button>
+      <button class="number">3</button>
+      <button class="ph-plus-bold bg-orange operator" data-action="add"></button>
+      <button class="number grid-col">0</button>
+      <button class="ph-equals-bold bg-orange" data-action="calculate"></button>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>

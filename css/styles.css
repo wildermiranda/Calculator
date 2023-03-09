@@ -1,0 +1,81 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+body {
+  height: 90vh;
+  background-color: #F5F2E9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #DDDDDD;
+}
+
+#calculator {
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 20px 6px rgba(78, 78, 78, 0.25);
+  background-color: #4E4E4E;
+  overflow: hidden;
+}
+#calculator .display {
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#calculator .display .wrapper {
+  display: flex;
+  gap: 0.3rem;
+}
+#calculator .display .wrapper div {
+  width: 0.563rem;
+  height: 0.563rem;
+  border-radius: 50%;
+}
+#calculator .display .wrapper .red-circle {
+  background-color: #EE5C54;
+}
+#calculator .display .wrapper .yellow-circle {
+  background-color: #F8BC45;
+}
+#calculator .display .wrapper .green-circle {
+  background-color: #5ECB42;
+}
+#calculator .display output {
+  margin-top: 0.5rem;
+  font-size: 3.25rem;
+  color: #9DA0B8;
+}
+#calculator #keyboard {
+  width: 300px;
+  height: 400px;
+  display: grid;
+  gap: 1px;
+  grid-template-columns: repeat(4, 1fr);
+}
+#calculator #keyboard .grid-col {
+  grid-column: span 3;
+}
+#calculator #keyboard button {
+  padding: 0.5rem;
+  border: none;
+  font-size: 1.25rem;
+  color: #DDDDDD;
+  cursor: pointer;
+  background-color: #6D6D6D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#calculator #keyboard button:hover {
+  box-shadow: inset 0px 0px 50px 6px rgba(0, 0, 0, 0.1);
+}
+#calculator #keyboard .bg-orange {
+  background-color: #F0A04B;
+  font-weight: 900;
+}
+
+/*# sourceMappingURL=styles.css.map */
