@@ -2,7 +2,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    
     font-family: 'Space Grotesk', sans-serif;
 }
 
@@ -10,12 +9,11 @@
 body {
     height: 90vh;
     background-color: #F5F2E9;
+    color: #DDDDDD;
 
     display: flex;
     align-items: center;
     justify-content: center;
-
-    color: #DDDDDD;
 }
 
 
@@ -28,18 +26,12 @@ body {
     background-color: #4E4E4E;
     overflow: hidden;
 
-
-    
-    
     .display {
         padding: 0.5rem 1rem 0.5rem 0.5rem;
-        
 
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        
-
         
         .wrapper {
             display: flex;
@@ -62,7 +54,6 @@ body {
             .green-circle {
                 background-color: #5ECB42;
             }
-
         }
 
         output {
@@ -78,7 +69,6 @@ body {
     #keyboard {
         width: 300px;
         height: 400px;
-        
 
         display: grid;
         gap: 1px;
@@ -93,8 +83,6 @@ body {
             color: #DDDDDD;
             cursor: pointer;
             background-color: #6D6D6D;
-            
-
             
 
             display: flex;

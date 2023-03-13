@@ -8,10 +8,10 @@
 body {
   height: 90vh;
   background-color: #F5F2E9;
+  color: #DDDDDD;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #DDDDDD;
 }
 
 #calculator {
