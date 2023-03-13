@@ -17,11 +17,13 @@ keyboard.addEventListener('click', e => {
         const displayedNumber = display.textContent
 
         
+        const previousKeyType = calculator.dataset.previousKeyType
+
         if (!action) {
             console.log('Number key')
 
-            const previousKeyType = calculator.dataset.previousKeyType
-
+            // console.log(previousKeyType)
+        
             if (displayedNumber === '0' || previousKeyType === 'operator') {
                 display.textContent = keyContent
             
@@ -43,8 +45,10 @@ keyboard.addEventListener('click', e => {
         } else {
             console.log('Operator key')
 
-            // Adicionar atributo
+            // Adicionar o atributo data-previous-key-tipe a div calculator se os operadores forem clicados. O motivo de criar este atributo é que quando um operador for clicado, o número digitado em seguida irá substituir o número que foi digitado inicialmente. Esse atributo é uma ligação entre o 'Operator key' com o 'Number key'.
+
             calculator.dataset.previousKeyType = 'operator'
+            // console.log(calculator) 
         }
     }
 })
