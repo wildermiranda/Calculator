@@ -22,33 +22,79 @@ keyboard.addEventListener('click', e => {
         if (!action) {
             console.log('Number key')
 
-            // console.log(previousKeyType)
-        
             if (displayedNumber === '0' || previousKeyType === 'operator') {
                 display.textContent = keyContent
             
             } else {
                 display.textContent = displayedNumber + keyContent
             }
+
+            calculator.dataset.previousKeyType = 'number'
         
         } else if (action === 'decimal') { 
             console.log('Decimal key')
+            
+            if (!displayedNumber.includes('.')) {
+                display.textContent = displayedNumber + '.'
+            
+            } 
+            
+            if (previousKeyType === 'operator') { 
+                display.textContent = '0.'
+            }
 
-            display.textContent = displayedNumber + '.'
+            calculator.dataset.previousKeyType = 'decimal'
 
         } else if (action === 'clear') { 
             console.log('Clear key') 
+
+            calculator.dataset.previousKeyType = 'clear'
         
         } else if (action === 'calculate') { 
-            console.log('Equal key') 
+            console.log('Equal key')
+
+            const calculate = (value1, operator, value2) => {
+                let number1 = Number(value1)
+                let number2 = Number(value2)
+                let result = ''
+
+                if (operator === 'percent') {
+                    result = number1 / 100 * number2
+                
+                } else if (operator === 'add') {
+                    result = number1 + number2
+
+                } else if (operator === 'subtract') {
+                    result = number1 - number2
+
+                } else if (operator === 'multiply') {
+                    result = number1 * number2
+
+                } else {
+                    result = number1 / number2
+                }
+
+                return result
+            }
+
+            const firstNumber = calculator.dataset.firstNumber
+            const operator = calculator.dataset.operator
+            const secondNumber = displayedNumber
+
+            display.textContent = calculate(firstNumber, operator, secondNumber)
+
+            calculator.dataset.previousKeyType = 'calculate'
         
         } else {
             console.log('Operator key')
 
-            // Adicionar o atributo data-previous-key-tipe a div calculator se os operadores forem clicados. O motivo de criar este atributo é que quando um operador for clicado, o número digitado em seguida irá substituir o número que foi digitado inicialmente. Esse atributo é uma ligação entre o 'Operator key' com o 'Number key'.
+            // Get first number
+            calculator.dataset.firstNumber = displayedNumber
+            
+            // Get operator
+            calculator.dataset.operator = action
 
             calculator.dataset.previousKeyType = 'operator'
-            // console.log(calculator) 
         }
     }
 })
