@@ -5,6 +5,10 @@
   font-family: "Space Grotesk", sans-serif;
 }
 
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
 body {
   height: 90vh;
   background-color: #F5F2E9;
@@ -16,38 +20,46 @@ body {
 
 #calculator {
   border-radius: 0.5rem;
-  box-shadow: 0px 0px 20px 6px rgba(78, 78, 78, 0.25);
+  box-shadow: 0 0 20px 6px rgba(78, 78, 78, 0.25);
   background-color: #4E4E4E;
   overflow: hidden;
 }
 #calculator .display {
-  padding: 0.5rem 1rem 0.5rem 0.5rem;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
 }
-#calculator .display .wrapper {
+#calculator .display .one {
+  padding: 0.5rem;
   display: flex;
   gap: 0.3rem;
 }
-#calculator .display .wrapper div {
+#calculator .display .one div {
   width: 0.563rem;
   height: 0.563rem;
   border-radius: 50%;
 }
-#calculator .display .wrapper .red-circle {
+#calculator .display .one .red-circle {
   background-color: #EE5C54;
 }
-#calculator .display .wrapper .yellow-circle {
+#calculator .display .one .yellow-circle {
   background-color: #F8BC45;
 }
-#calculator .display .wrapper .green-circle {
+#calculator .display .one .green-circle {
   background-color: #5ECB42;
 }
-#calculator .display output {
-  margin-top: 0.5rem;
-  font-size: 3.25rem;
+#calculator .display .two {
+  height: 4rem;
+  display: flex;
+  justify-content: right;
+}
+#calculator .display .two output {
+  height: 100%;
+  width: fit-content;
+  padding: 0 1rem 0 0.25rem;
+  font-size: 2.75rem;
   color: #9DA0B8;
+  display: flex;
+  align-items: center;
 }
 #calculator #keyboard {
   width: 300px;
@@ -75,7 +87,14 @@ body {
 }
 #calculator #keyboard .bg-orange {
   background-color: #F0A04B;
-  font-weight: 900;
+}
+
+.medium-font {
+  font-size: 1.25rem !important;
+}
+
+.small-font {
+  font-size: 1rem !important;
 }
 
 /*# sourceMappingURL=styles.css.map */

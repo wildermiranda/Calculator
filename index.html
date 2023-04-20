@@ -17,18 +17,20 @@
 <body>
   <div id="calculator">
     <div class="display">
-      <div class="wrapper">
+      <section class="one">
         <div class="red-circle"></div>
         <div class="yellow-circle"></div>
         <div class="green-circle"></div>
-      </div>
+      </section>
 
-      <output>0</output>
+      <section class="two">
+        <output>0</output>
+      </section>
     </div>
     
   
     <div id="keyboard">
-      <button data-action="clear">AC</button>
+      <button data-action="clear" class="clear">AC</button>
       <button class="ph-percent-bold" data-action="percent"></button>
       <button data-action="decimal">,</button>
       <button class="ph-divide-bold bg-orange operator" data-action="divide"></button>
